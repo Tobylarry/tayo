@@ -1,0 +1,42 @@
+[
+    {
+    "id": 0,
+    "image": "./image/blsckTop.jpg",
+    "name": "Boogy Boyz Black Tshirt",
+    "price": 50.00,
+    "size": ["S", "M", "L", "XL", "XXL"]
+},
+
+{
+    "id": 1,
+    "image": "./image/whiteRed.jpg",
+    "name": "Boogy Boyz star cap Red",
+    "price": 35.00,
+    "size": ["S", "M", "L", "XL", "XXL"]
+},
+
+{
+    "id": 2,
+    "image": "./image/blue.JPG",
+    "name": "Boogy Boyz star cap Blue",
+    "price": 30.00,
+    "size": ["S", "M", "L", "XL", "XXL"]
+},
+
+{
+    "id": 3,
+    "image": "./image/black.JPG",
+    "name": "Boogy Boyz star cap Black",
+    "price": 30.00,
+    "size": ["S", "M", "L", "XL", "XXL"]
+},
+
+{
+    "id": 4,
+    "image": "./image/orange.jpg",
+    "name": "Boogy Boyz star cap Orange",
+    "price": 30.00,
+    "size": ["S", "M", "L", "XL", "XXL"]
+}
+
+]
