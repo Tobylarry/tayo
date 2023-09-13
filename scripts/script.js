@@ -151,9 +151,7 @@ add.addEventListener('click', function(){
     }
     else{
         let res = cart.find(function(element){
-            if(element){
-                element.quantity = qty.innerHTML
-            }
+             element.quantity = qty.innerHTML;
             return element.name == nameee;
         });
         console.log(res)
