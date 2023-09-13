@@ -22,7 +22,7 @@ if(localStorage.getItem('cart')){
         </div>
        <div>
        <label>Total</label><br>
-       <p>${'$' + (obj.price * obj.quantity)}</p>
+       <p>${'$' + (parseInt(obj.price * obj.quantity))}</p>
        </div>
        </div>
        </div>
