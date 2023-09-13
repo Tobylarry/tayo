@@ -36,7 +36,7 @@ if(localStorage.getItem('cart')){
 
 
 window.onload = function(){
-    if(localStorage.getItem('cart').length > 0){
+    if(localStorage.getItem('cart').length != 0){
         notification.style.display = 'block';
     }
 }
