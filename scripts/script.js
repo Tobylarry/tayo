@@ -33,7 +33,7 @@ let value = 0;
 */
 image[1].addEventListener('click', function(){
     show.style.display = "block";
-    main.src = "./image/black.JPG"
+    main.src = "./image/whiteRed.jpg"
     img1.src = "./image/trend11.jpg"
     img2.src = "./image/whiteRed.jpg"
     img3.src = "./image/trend11.jpg"
