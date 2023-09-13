@@ -95,28 +95,38 @@ addition.addEventListener('click', function(){
 let products = JSON.parse(localStorage.getItem('products'));
 let cart = JSON.parse(localStorage.getItem('cart'));
 
-let val = JSON.parse(localStorage.getItem('val'));
+let quantity = JSON.parse(localStorage.getItem('quantity'));
 let valu = JSON.parse(localStorage.getItem('valu'));
 
 
 //fetch data from json file
-    fetch("data.json", "val")
+    fetch("data.json")
     .then(function(response, res){
         return response.json();
     })
-    .then(function(data, data2){
+    .then(function(data){
         localStorage.setItem('products', JSON.stringify(data));
-        localStorage.setItem('val', JSON.stringify(data));
+        
         if(!localStorage.getItem('cart')){
             localStorage.setItem('cart', '[]');
             console.log(localStorage.getItem('cart'))
         }
+        console.log(localStorage.getItem('products', 'val'))
+    })
+
+//for quantity of each product.
+  fetch("data.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        localStorage.setItem('quantity', JSON.stringify(data));
 
           if(!localStorage.getItem('valu')){
             localStorage.setItem('valu', '[]');
             console.log(localStorage.getItem('valu'))
         }
-        console.log(localStorage.getItem('products', 'val'))
+        console.log(localStorage.getItem('quantity'))
     })
 
 
