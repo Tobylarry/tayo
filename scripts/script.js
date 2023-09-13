@@ -106,11 +106,17 @@ let valu = JSON.parse(localStorage.getItem('valu'));
     })
     .then(function(data, data2){
         localStorage.setItem('products', JSON.stringify(data));
+        localStorage.setItem('val', JSON.stringify(data));
         if(!localStorage.getItem('cart')){
             localStorage.setItem('cart', '[]');
             console.log(localStorage.getItem('cart'))
         }
-        console.log(localStorage.getItem('products'))
+
+          if(!localStorage.getItem('valu')){
+            localStorage.setItem('valu', '[]');
+            console.log(localStorage.getItem('valu'))
+        }
+        console.log(localStorage.getItem('products', 'val'))
     })
 
 
