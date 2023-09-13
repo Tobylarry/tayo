@@ -11,7 +11,7 @@ if(localStorage.getItem('cart')){
        <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
        <div>
        <p>${item.name}</p>
-       <p>$${item.price}</p>
+       <p>${item.price}</p>
        </div>
        <div class='pqt'>
         <div><label>Price</label><br>
