@@ -115,7 +115,7 @@ let valu = JSON.parse(localStorage.getItem('valu'));
     })
 
 //for quantity of each product.
-  fetch("data.json")
+  fetch("quantity.json")
     .then(function(response){
         return response.json();
     })
