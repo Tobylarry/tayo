@@ -95,13 +95,16 @@ addition.addEventListener('click', function(){
 let products = JSON.parse(localStorage.getItem('products'));
 let cart = JSON.parse(localStorage.getItem('cart'));
 
+let val = JSON.parse(localStorage.getItem('val'));
+let valu = JSON.parse(localStorage.getItem('valu'));
+
 
 //fetch data from json file
-    fetch("data.json")
-    .then(function(response){
+    fetch("data.json", "val")
+    .then(function(response, res){
         return response.json();
     })
-    .then(function(data){
+    .then(function(data, data2){
         localStorage.setItem('products', JSON.stringify(data));
         if(!localStorage.getItem('cart')){
             localStorage.setItem('cart', '[]');
