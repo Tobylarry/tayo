@@ -30,7 +30,7 @@ if(localStorage.getItem('cart')){
        </div>
 
        `
-       subTotal.innerHTML = '$' + obj.reduce((item, total) => (item.price * item.quantity) + total);
+       subTotal.innerHTML = 20;
     })
     document.querySelector('.det').innerHTML = showItem;
 }
