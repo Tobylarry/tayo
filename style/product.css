@@ -93,7 +93,7 @@
 }
 
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 650px) {
     .show
     .show .showProduct{
        flex-direction: column;
@@ -129,7 +129,7 @@
 
 
   
-  @media only screen and (min-width: 601px) and (max-width: 1000px) {
+  @media only screen and (min-width: 651px) and (max-width: 1000px) {
     .show
     .show .showProduct{
        flex-direction: column;
