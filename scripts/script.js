@@ -151,7 +151,7 @@ add.addEventListener('click', function(){
     }
     else{
         let res = cart.find(function(element){
-             element.quantity = qty.innerHTML;
+             element.quantity = parseInt(qty.innerHTML);
             return element.name == nameee;
         });
         console.log(res)
