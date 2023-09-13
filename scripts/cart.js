@@ -1,5 +1,6 @@
 let qy = document.querySelector('.qty');
 let clearCart = document.querySelector('.cc');
+let subTotal = document.querySelector('.subTotal');
 
 
 if(localStorage.getItem('cart')){
@@ -31,13 +32,12 @@ if(localStorage.getItem('cart')){
     })
     document.querySelector('.det').innerHTML = showItem;
 }
+
+subTotal.innerHTML = '$' + ob.reduce((item, total) => (item.price * item.quantity) + total);
 window.onload = function(){
-    if(localStorage.getItem('cart').length != 0){
+    if(localStorage.getItem('cart').length > 0){
         notification.style.display = 'block';
     }
-
-    alert('yes')
-   
 }
 
 clearCart.addEventListener('click', function(){
