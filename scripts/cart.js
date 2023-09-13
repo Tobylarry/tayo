@@ -2,6 +2,7 @@ let qy = document.querySelector('.qty');
 let clearCart = document.querySelector('.cc');
 let subTotal = document.querySelector('.subTotal');
 
+    let obj = JSON.parse(localStorage.getItem('cart'))
 
 if(localStorage.getItem('cart')){
     let obj = JSON.parse(localStorage.getItem('cart'))
