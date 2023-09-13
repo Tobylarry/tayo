@@ -32,7 +32,7 @@ if(localStorage.getItem('cart')){
     document.querySelector('.det').innerHTML = showItem;
 }
 window.onload = function(){
-    if(localStorage.getItem('cart') == 0){
+    if(localStorage.getItem('cart').length != 0){
         notification.style.display = 'block';
     }
    
