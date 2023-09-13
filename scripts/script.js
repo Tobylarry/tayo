@@ -89,6 +89,7 @@ minus.addEventListener('click', function(){
 addition.addEventListener('click', function(){
     value++;
     qty.innerHTML = value;
+    console.log(qty.innerHTML)
 })
 
 
@@ -134,7 +135,7 @@ let valu = JSON.parse(localStorage.getItem('valu'));
 //ADDING THE PRODUCT IN THE CART
 
 add.addEventListener('click', function(){
-     console.log(qty.innerHTML)
+     console.log(qty.innerHTML, qty.value)
     show.style.display = 'none';
     if(!switchs && localStorage.getItem('cart')){
         notification.style.display = 'block'   
