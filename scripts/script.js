@@ -64,7 +64,7 @@ image[3].addEventListener('click', function(){
 image[4].addEventListener('click', function(){
     show.style.display = "block";
     main.src = "./image/black.JPG"
-    img1.src = "./image/trend5.jpeg"
+    img1.src = "./image/trend6.jpeg"
     img2.src = "./image/trend7.jpeg"
     img3.src = "./image/trend10.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Orange';
