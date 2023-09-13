@@ -18,7 +18,7 @@ if(localStorage.getItem('cart')){
         <p>${'$' + obj.price}</p></div>
         <div>
         <label>Quantity</label><br>
-        <input type="number"/>${'$' + obj.quantity}<br>
+        <p>${'$' + obj.quantity}</p><br>
         </div>
        <div>
        <label>Total</label><br>
