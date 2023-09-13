@@ -159,6 +159,6 @@
         height: 60px;
     }
     .img3{
-        display: none;
+        display: block;
     }
   }
