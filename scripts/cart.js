@@ -15,14 +15,14 @@ if(localStorage.getItem('cart')){
        </div>
        <div class='pqt'>
         <div><label>Price</label><br>
-        <p>${'$' + obj.price}</p></div>
+        <p>${'$' + item.price}</p></div>
         <div>
         <label>Quantity</label><br>
-        <p>${'$' + obj.quantity}</p><br>
+        <p>${'$' + item.quantity}</p><br>
         </div>
        <div>
        <label>Total</label><br>
-       <p>${'$' + (parseInt(obj.price * obj.quantity))}</p>
+       <p>${'$' + (item.price * item.quantity))}</p>
        </div>
        </div>
        </div>
