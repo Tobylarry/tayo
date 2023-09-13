@@ -130,9 +130,10 @@
 
   
   @media only screen and (min-width: 651px) and (max-width: 1000px) {
+    .show
     .show .showProduct{
        flex-direction: column;
-       width: 100%;
+       width: 80%;
     }
 
     .show h1{
@@ -144,20 +145,20 @@
         font-weight: 900;
     }
     .show .all{
-        padding:20px;
-        width:100%;
+        padding:30px 20px 30px 20px;
+        width:80%;
     }
 
 
     .show .mainProduct{
-        width: 125px;
-        height: 125px;
+        width: 150px;
+        height: 150px;
     }
     .img1, .img2, .img3{
-        width:45px;
-        height: 45px;
+        width:60px;
+        height: 60px;
     }
     .img3{
-        display: block;
+        display: none;
     }
   }
