@@ -35,6 +35,8 @@ window.onload = function(){
     if(localStorage.getItem('cart').length != 0){
         notification.style.display = 'block';
     }
+
+    alert('yes')
    
 }
 
