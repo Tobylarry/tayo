@@ -1,193 +1,164 @@
-let image = document.querySelectorAll('.image');
-let show = document.querySelector('.show');
-let main = document.querySelector('.mainProduct');
-let img1 = document.querySelector('.img1');
-let img2 = document.querySelector('.img2');
-let img3 = document.querySelector('.img3');
-let namee = document.querySelector('.name');
-let price = document.querySelector('.price');
-const x = document.querySelector('.x')
-let minus = document.querySelector('.minus');
-let addition  = document.querySelector('.addition');
-let qty = document.querySelector('.qty');
-let add = document.getElementById('add');
-let det = document.querySelector('.det');
-let notification = document.querySelector('.notification');
-let switchs = false;
+.product img{
+    width:250px;
+    height:250px;
+}
 
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    gap: 60px;
+    text-align: center;
+    align-items: center;
+    line-height: 10px;
+    width: 90%;
+    margin: 50px auto;
+}
 
-//SETTING GLOBAL VARIABLES SO WE CAN ACCESS THEM FROM INSIDE THE FUNCTIONS.
-let value = 0;
+.product h1{
+    font-size: 1.2rem;
+    padding: 5px 0 0 0;
+}
 
+.product h2, .product h3{
+    font-size: 1rem;;
+    opacity: 0.6;
+}
 
+.product h5{
+    font-size: 1.6rem;
+}
 
-/** image[0].addEventListener('click', function(){
-    show.style.display = "block";
-    main.src = "./image/blsckTop.jpg"
-    img1.src = "./image/trend10.jpeg"
-    img2.src = "./image/trend11.jpg"
-    img3.src = "./image/trend12.jpg"
-    namee.innerHTML = 'Boogy Boyz Black Tshirt';
-    price.innerHTML = '$50.00 USD';
-})
-*/
-image[1].addEventListener('click', function(){
-    show.style.display = "block";
-    main.src = "./image/black.JPG"
-    img1.src = "./image/trend11.jpg"
-    img2.src = "./image/whiteRed.jpg"
-    img3.src = "./image/trend11.jpg"
-    namee.innerHTML = 'Boogy Boyz star cap Red';
-    price.innerHTML = '$30.00 USD';
-})
+.show .mainProduct{
+    width: 200px;
+    height: 200px;
+}
 
-image[2].addEventListener('click', function(){
-    show.style.display = "block";
-    main.src = "./image/black.JPG"
-    img1.src = "./image/trend2.jpg"
-    img2.src = "./image/trend9.jpg"
-    img3.src = "./image/trend10.jpeg"
-    namee.innerHTML = 'Boogy Boyz star cap Blue';
-    price.innerHTML = '$35.00 USD';
-})
-
-image[3].addEventListener('click', function(){
-    show.style.display = "block";
-    main.src = "./image/black.JPG"
-    img1.src = "./image/trend7.jpg"
-    img2.src = "./image/trend8.jpg"
-    img3.src = "./image/trend10.jpeg"
-    namee.innerHTML = 'Boogy Boyz star cap Black';
-    price.innerHTML = '$30.00 USD';
-})
-
-image[4].addEventListener('click', function(){
-    show.style.display = "block";
-    main.src = "./image/black.JPG"
-    img1.src = "./image/trend5.jpg"
-    img2.src = "./image/trend6.jpg"
-    img3.src = "./image/trend10.jpeg"
-    namee.innerHTML = 'Boogy Boyz star cap Orange';
-    price.innerHTML = '$30.00 USD';
-})
-
-x.addEventListener('click', function(){
-    show.style.display = 'none';
-})
-
-minus.addEventListener('click', function(){
-    if(qty.innerHTML == 0){
-        value = 0;
-        qty.innerHTML = value;
-    }
-    else{
-        value--;
-        qty.innerHTML = value;
-    }
-})
-
-addition.addEventListener('click', function(){
-    value++;
-    qty.innerHTML = value;
-})
-
-
-let products = JSON.parse(localStorage.getItem('products'));
-let cart = JSON.parse(localStorage.getItem('cart'));
-
-let quantity = JSON.parse(localStorage.getItem('quantity'));
-let valu = JSON.parse(localStorage.getItem('valu'));
-
-
-//fetch data from json file
-    fetch("data.json")
-    .then(function(response, res){
-        return response.json();
-    })
-    .then(function(data){
-        localStorage.setItem('products', JSON.stringify(data));
-        
-        if(!localStorage.getItem('cart')){
-            localStorage.setItem('cart', '[]');
-            console.log(localStorage.getItem('cart'))
-        }
-        console.log(localStorage.getItem('products', 'val'))
-    })
-
-//for quantity of each product.
-  fetch("quantity.json")
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        localStorage.setItem('quantity', JSON.stringify(data));
-
-          if(!localStorage.getItem('valu')){
-            localStorage.setItem('valu', '[]');
-            console.log(localStorage.getItem('valu'))
-        }
-        console.log(localStorage.getItem('quantity'))
-    })
-
-
-  
-//ADDING THE PRODUCT IN THE CART
-
-add.addEventListener('click', function(){
-    show.style.display = 'none';
-    if(!switchs && localStorage.getItem('cart')){
-        notification.style.display = 'block'   
-    }
-
-    let nameee  = namee.innerHTML;
-    console.log(nameee)
-    
-    let product = products.find(function(product){
-        return product.name == nameee;
-    })
-
-    if(cart.length == 0){
-        cart.push(product);
-    }
-    else{
-        let res = cart.find(function(element){
-             element.quantity = parseInt(qty.innerHTML);
-            return element.name == nameee;
-        });
-        console.log(res)
-        if(res === undefined){
-            cart.push(product);
-        }
-    }
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    console.log(localStorage.getItem('cart'))
-  
-})
-
-//removing Items
-function removeItemFromCart(productId){
-    let temp = cart.filter(item => item.id != productId);
-    localStorage.setItem("cart", JSON.stringify(temp));
+.img1, .img2, .img3{
+    width:100px;
+    height: 100px;
 }
 
 
-
-//get order price total
-function getTotal(){
-    let temp = cart.map(function(item){
-        return parseFloat(item.price);
-    })
-
-    let sum = temp.reduce(function(prev, next){
-        return prev + next;
-    }, 0);
-
-    console.log(sum);
+.show{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    padding-top: 20px;
 }
 
-console.log(cart)
-console.log('n')
+.show .all{
+    background-color: white;
+    padding:40px 20px 40px 20px;
+    width:60%;
+    margin: 0 auto;
+}
+
+.show .showProduct{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.show .x{
+    float: right;
+    font-size: 24px;
+}
+
+.bi{
+    position: relative;
+  display: inline-block;
+}
+.notification{
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    display:none;
+}
 
 
+  @media only screen and (max-width: 650px) {
+    .show
+    .show .showProduct{
+       flex-direction: column;
+       width: 80%;
+    }
 
+    .show h1{
+        font-size: 0.8rem;
+        margin-top:5px;
+    }
+    .show h3{
+        font-size: 1.0rem;
+        font-weight: 900;
+    }
+    .show .all{
+        padding:30px 20px 30px 20px;
+        width:90%;
+    }
+
+
+    .show .mainProduct{
+        width: 130px;
+        height: 130px;
+    }
+    .img1, .img2, .img3{
+        width:50px;
+        height: 50px;
+    }
+    .img3{
+        display: none;
+    }
+  }
+
+
+  
+  @media only screen and (min-width: 651px) and (max-width: 1000px) {
+    .show
+    .show .showProduct{
+       flex-direction: column;
+       width: 80%;
+    }
+
+    .show h1{
+        font-size: 1.2rem;
+        margin-top:5px;
+    }
+    .show h3{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .show .all{
+        padding:30px 20px 30px 20px;
+        width:80%;
+    }
+
+
+    .show .mainProduct{
+        width: 150px;
+        height: 150px;
+    }
+    .img1, .img2, .img3{
+        width:60px;
+        height: 60px;
+    }
+    .img3{
+        display: none;
+    }
+  }
