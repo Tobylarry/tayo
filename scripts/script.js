@@ -24,9 +24,9 @@ let value = 0;
 /** image[0].addEventListener('click', function(){
     show.style.display = "block";
     main.src = "./image/blsckTop.jpg"
-    img1.src = "./image/trend10.jpeg"
-    img2.src = "./image/trend11.jpg"
-    img3.src = "./image/trend12.jpg"
+    img1.src = "./image/trend1.jpg"
+    img2.src = "./image/trend2.jpg"
+    img3.src = "./image/trend1.jpg"
     namee.innerHTML = 'Boogy Boyz Black Tshirt';
     price.innerHTML = '$50.00 USD';
 })
@@ -43,10 +43,10 @@ image[1].addEventListener('click', function(){
 
 image[2].addEventListener('click', function(){
     show.style.display = "block";
-    main.src = "./image/black.JPG"
-    img1.src = "./image/trend2.jpg"
-    img2.src = "./image/trend9.jpg"
-    img3.src = "./image/trend10.jpeg"
+    main.src = "./image/blue.JPG"
+    img1.src = "./image/trend3.jpeg"
+    img2.src = "./image/trend4.jpeg"
+    img3.src = "./image/trend5.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Blue';
     price.innerHTML = '$35.00 USD';
 })
@@ -54,9 +54,9 @@ image[2].addEventListener('click', function(){
 image[3].addEventListener('click', function(){
     show.style.display = "block";
     main.src = "./image/black.JPG"
-    img1.src = "./image/trend7.jpg"
-    img2.src = "./image/trend8.jpg"
-    img3.src = "./image/trend10.jpeg"
+    img1.src = "./image/trend12.jpg"
+    img2.src = "./image/trend9.jpeg"
+    img3.src = "./image/trend8.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Black';
     price.innerHTML = '$30.00 USD';
 })
