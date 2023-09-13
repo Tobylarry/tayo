@@ -33,7 +33,7 @@ if(localStorage.getItem('cart')){
     document.querySelector('.det').innerHTML = showItem;
 }
 
-subTotal.innerHTML = '$' + ob.reduce((item, total) => (item.price * item.quantity) + total);
+subTotal.innerHTML = '$' + obj.reduce((item, total) => (item.price * item.quantity) + total);
 window.onload = function(){
     if(localStorage.getItem('cart').length > 0){
         notification.style.display = 'block';
