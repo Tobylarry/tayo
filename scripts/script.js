@@ -34,9 +34,9 @@ let value = 0;
 image[1].addEventListener('click', function(){
     show.style.display = "block";
     main.src = "./image/black.JPG"
-    img1.src = "./image/trend1.jpg"
-    img2.src = "./image/trend2.jpg"
-    img3.src = "./image/trend10.jpeg"
+    img1.src = "./image/trend11.jpg"
+    img2.src = "./image/whiteRed.jpg"
+    img3.src = "./image/trend11.jpg"
     namee.innerHTML = 'Boogy Boyz star cap Red';
     price.innerHTML = '$30.00 USD';
 })
