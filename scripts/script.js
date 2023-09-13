@@ -134,7 +134,7 @@ let valu = JSON.parse(localStorage.getItem('valu'));
 //ADDING THE PRODUCT IN THE CART
 
 add.addEventListener('click', function(){
-   
+     console.log(qty.innerHTML)
     show.style.display = 'none';
     if(!switchs && localStorage.getItem('cart')){
         notification.style.display = 'block'   
