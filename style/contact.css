@@ -74,12 +74,12 @@
         font-size: 2.1em;
     }
     .form textarea{
-        width: 70%;
+        width: 90%;
         border-radius: 10px;
         height:70px;
     }
     .form input{
-        width: 70%;
+        width: 90%;
         border-radius: 10px;
         height:40px;
     }
