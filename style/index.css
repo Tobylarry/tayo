@@ -55,7 +55,7 @@
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .text {font-size: 11px}
 }
 
@@ -85,4 +85,38 @@
     line-height: 10px;
     width: 90%;
     margin: 50px auto;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+       .text {font-size: 13px}
+}
+
+.trendslide{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.trendslide img{
+   height:390px;
+   width:80%;
+}
+
+.someProducts img{
+    width:200px;
+    height:200px;
+}
+
+.someProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    gap: 60px;
+    text-align: center;
+    align-items: center;
+    line-height: 10px;
+    width: 90%;
+    margin: 50px auto;
+}
+  
 }
