@@ -35,22 +35,6 @@ if(localStorage.getItem('cart')){
     document.querySelector('.det').innerHTML = showItem;
 }
 
-function minus(){
-    if(qty.innerHTML == 0){
-        value = 0;
-        qty.innerHTML = value;
-    }
-    else{
-        value--;
-        qty.innerHTML = value;
-    }
-})
-
-function add(){
-    value++;
-    qty.innerHTML = value;
-})
-
 
 window.onload = function(){
     if(localStorage.getItem('cart').length != 0){
