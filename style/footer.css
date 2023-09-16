@@ -13,6 +13,7 @@ footer {
  footer i:hover{
      width:20px;
      height:18px;
+     margin-right: 10px;
  }
 
 @media only screen and (max-width: 750px){
