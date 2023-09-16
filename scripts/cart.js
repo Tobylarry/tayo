@@ -20,7 +20,7 @@ if(localStorage.getItem('cart')){
         <p>${'$' + item.price}</p></div>
         <div>
         <label>Quantity</label><br>
-        <span class='minus'>-</span> <p>${item.quantity}</p><span class='addition'> + </span>
+        <span class='minus' onclick="minus()">-</span> <p>${item.quantity}</p><span class='addition' onclick='add()'> + </span>
         </div>
        <div>
        <label>Total</label><br>
@@ -34,6 +34,22 @@ if(localStorage.getItem('cart')){
     })
     document.querySelector('.det').innerHTML = showItem;
 }
+
+function minus(){
+    if(qty.innerHTML == 0){
+        value = 0;
+        qty.innerHTML = value;
+    }
+    else{
+        value--;
+        qty.innerHTML = value;
+    }
+})
+
+function add(){
+    value++;
+    qty.innerHTML = value;
+})
 
 
 window.onload = function(){
