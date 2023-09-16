@@ -5,8 +5,7 @@ footer {
     text-align: center;
     padding: 20px 20px 0 20px;
     line-height: 30px;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+   position:fixed;
     bottom: 0;
   }
 
