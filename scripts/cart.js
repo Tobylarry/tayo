@@ -20,7 +20,7 @@ if(localStorage.getItem('cart')){
         <p>${'$' + item.price}</p></div>
         <div>
         <label>Quantity</label><br>
-        <span>-</span> <p>${item.quantity}</p><span> + </span>
+        <span class='minus'>-</span> <p>${item.quantity}</p><span class='addition'> + </span>
         </div>
        <div>
        <label>Total</label><br>
