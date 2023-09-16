@@ -20,12 +20,12 @@
 @media only screen and (max-width: 450px) {
      
     .shipping h1{
-        font-size: 1.4em;
+        font-size: 2.4em;
         font-weight: bold;
     }
 
     .shipping h5{
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
     .shipping{
@@ -34,7 +34,7 @@
 
     .shipping p{
         line-height: 25px;
-        font-size: 0.8em;
+        font-size: 1.2em;
     }
 
 }
