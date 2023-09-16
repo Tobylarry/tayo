@@ -15,3 +15,20 @@
 .shipping p{
     line-height: 30px;
 }
+
+
+@media only screen and (max-width: 450px) {
+     
+    .shipping h1{
+        font-size: 24px;
+    }
+
+    .shipping{
+        width:85%;
+    }
+
+    .shipping p{
+        line-height: 20px;
+    }
+
+}
