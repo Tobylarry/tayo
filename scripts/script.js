@@ -122,7 +122,9 @@ add.addEventListener('click', function(){
     let nameee  = namee.innerHTML;
     
     let product = products.find(function(product){
-    [product.quantity] = qty.innerHTML;
+        if(product.name === nameee){
+            product.quantity = qty.innerHTML;
+        }
         console.log(product.quantity)
         return product.name == nameee;
     })
