@@ -31,8 +31,7 @@ if(localStorage.getItem('cart')){
        </div>
 
        `
-       subTotal.innerHTML = 20
-       subTotal.innerHTML = 20;
+       subTotal.textContent = 20;
     })
     document.querySelector('.det').innerHTML = showItem;
 }
@@ -45,6 +44,5 @@ window.onload = function(){
 
 clearCart.addEventListener('click', function(){
     location.reload();
-    alert('cart cleared')
-    localStorage.clear()
+    localStorage.setItem('cart', '[]');
 })
