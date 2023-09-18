@@ -2,7 +2,11 @@ body{
     height: 100%;
 }
 
-
+.shipping footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
 .shipping{
     width:70%;
     margin: 0 auto;
