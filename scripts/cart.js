@@ -35,18 +35,7 @@ if(localStorage.getItem('cart')){
     })
     document.querySelector('.det').innerHTML = showItem;
 }
-console.log(//get order price total
-function getTotal(){
-    let temp = cart.map(function(item){
-        return parseFloat(item.price);
-    })
 
-    let sum = temp.reduce(function(prev, next){
-        return prev + next;
-    }, 0);
-
-    console.log(sum, 'hero');
-})
 window.onload = function(){
     if(localStorage.getItem('cart').length != 0){
         notification.style.display = 'block';
