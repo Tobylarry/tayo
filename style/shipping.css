@@ -1,7 +1,7 @@
 body{height:100%;}
 .ship{height: 100%;}
 .ship footer{
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     background-color: #000000;
