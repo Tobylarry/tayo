@@ -6,7 +6,8 @@
     background-color: #000000;
     color: #ffffff;
     width: 100%;
-    margin-top:40px;
+    clear: both;
+  margin-top: 50px;
 }
 .shipping{
     width:70%;
