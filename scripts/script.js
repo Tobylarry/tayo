@@ -163,18 +163,7 @@ add.addEventListener('click', function(){
     }
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    console.log(localStorage.getItem('cart'))
-  
-})
-
-//removing Items
-function removeItemFromCart(productId){
-    let temp = cart.filter(item => item.id != productId);
-    localStorage.setItem("cart", JSON.stringify(temp));
-}
-
-
-
+    
 //get order price total
 function getTotal(){
     let temp = cart.map(function(item){
@@ -187,6 +176,19 @@ function getTotal(){
 
     console.log(sum, 'hero');
 }
+
+
+    console.log(localStorage.getItem('cart'))
+  
+})
+
+//removing Items
+function removeItemFromCart(productId){
+    let temp = cart.filter(item => item.id != productId);
+    localStorage.setItem("cart", JSON.stringify(temp));
+}
+
+
 
 console.log(cart)
 console.log('n')
