@@ -1,9 +1,11 @@
 
 .ship footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
-    background-color: red;
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
 }
 .shipping{
     width:70%;
