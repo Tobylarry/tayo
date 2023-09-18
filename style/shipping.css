@@ -1,6 +1,4 @@
-.ship{
-    height: 100%;
-}
+
 .ship footer{
     position: fixed;
     bottom: 0;
@@ -8,8 +6,6 @@
     background-color: #000000;
     color: #ffffff;
     width: 100%;
-    overflow: auto;
-    margin-top:20px;
 }
 .shipping{
     width:70%;
