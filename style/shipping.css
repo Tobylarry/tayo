@@ -40,11 +40,14 @@ body{height:100%;}
     .shipping p{
         line-height: 20px;
     }
+    .ship footer{
+        position: relative;
+    }
 
 }
 
 
-@media only screen and (max-width: 650px) {
+@media only screen and (min-width: 451px) and (max-width: 650px) {
      
     .shipping h1{
         font-size: 1.4em;
@@ -63,6 +66,10 @@ body{height:100%;}
     .shipping p{
         line-height: 30px;
         font-size: 0.8em;
+    }
+
+    .ship footer{
+        position: relative;
     }
 
 }
