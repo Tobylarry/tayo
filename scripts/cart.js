@@ -6,7 +6,8 @@ let subTotal = document.querySelector('.subTotal');
 
 if(localStorage.getItem('cart')){
     let obj = JSON.parse(localStorage.getItem('cart'))
-    console.log(obj)
+    var qty = item.quantity;
+    console.log(obj, qty);
    let showItem = obj.map((item) =>{
        return `
        <div class='it'>
