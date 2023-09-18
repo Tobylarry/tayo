@@ -13,6 +13,7 @@ let qty = document.querySelector('.qty');
 let add = document.getElementById('add');
 let det = document.querySelector('.det');
 let notification = document.querySelector('.notification');
+let switchs = false;
 
 
 //SETTING GLOBAL VARIABLES SO WE CAN ACCESS THEM FROM INSIDE THE FUNCTIONS.
@@ -77,25 +78,27 @@ x.addEventListener('click', function(){
 })
 
 minus.addEventListener('click', function(){
-    if(qty.innerHTML == 0 || qty.innerHTML <  0){
+    if(qty.innerHTML == 0){
+        value = 0;
         qty.innerHTML = value;
     }
     else{
         value--;
         qty.innerHTML = value;
-        value = 0;
     }
 })
 
 addition.addEventListener('click', function(){
     value++;
     qty.innerHTML = value;
-    value = 0;
 })
 
 
 let products = JSON.parse(localStorage.getItem('products'));
 let cart = JSON.parse(localStorage.getItem('cart'));
+
+let quantity = JSON.parse(localStorage.getItem('quantity'));
+let valu = JSON.parse(localStorage.getItem('valu'));
 
 
 //fetch data from json file
@@ -110,6 +113,22 @@ let cart = JSON.parse(localStorage.getItem('cart'));
             localStorage.setItem('cart', '[]');
             console.log(localStorage.getItem('cart'))
         }
+        console.log(localStorage.getItem('products', 'val'))
+    })
+
+//for quantity of each product.
+  fetch("quantity.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        localStorage.setItem('quantity', JSON.stringify(data));
+
+          if(!localStorage.getItem('valu')){
+            localStorage.setItem('valu', '[]');
+            console.log(localStorage.getItem('valu'))
+        }
+        console.log(localStorage.getItem('quantity'))
     })
 
 
@@ -118,14 +137,14 @@ let cart = JSON.parse(localStorage.getItem('cart'));
 
 add.addEventListener('click', function(){
     show.style.display = 'none';
+    if(!switchs && localStorage.getItem('cart')){
+        notification.style.display = 'block'   
+    }
 
     let nameee  = namee.innerHTML;
+    console.log(nameee)
     
     let product = products.find(function(product){
-        if(product.name === nameee){
-            product.quantity = qty.innerHTML;
-        }
-        console.log(product.quantity)
         return product.name == nameee;
     })
 
@@ -134,7 +153,7 @@ add.addEventListener('click', function(){
     }
     else{
         let res = cart.find(function(element){
-             element.quantity = parseInt(value);
+             element.quantity = parseInt(qty.innerHTML);
             return element.name == nameee;
         });
         console.log(res)
@@ -143,21 +162,6 @@ add.addEventListener('click', function(){
         }
     }
     localStorage.setItem("cart", JSON.stringify(cart));
-
-    
-//get order price total
-function getTotal(){
-    let temp = cart.map(function(item){
-        return parseFloat(item.price);
-    })
-
-    let sum = temp.reduce(function(prev, next){
-        return prev + next;
-    }, 0);
-
-    console.log(sum, 'hero');
-}
-
 
     console.log(localStorage.getItem('cart'))
   
@@ -171,7 +175,21 @@ function removeItemFromCart(productId){
 
 
 
+//get order price total
+function getTotal(){
+    let temp = cart.map(function(item){
+        return parseFloat(item.price);
+    })
+
+    let sum = temp.reduce(function(prev, next){
+        return prev + next;
+    }, 0);
+
+    console.log(sum, 'hero');
+}
+
 console.log(cart)
+console.log('n')
 
 
 
