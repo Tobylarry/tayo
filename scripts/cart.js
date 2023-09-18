@@ -31,11 +31,11 @@ if(localStorage.getItem('cart')){
        </div>
 
        `
+       subTotal.innerHTML +=  (item.price * item.quantity).toString();
     })
     document.querySelector('.det').innerHTML = showItem;
 }
 console.log(subTotal.innerHTML = (20).toString(), 'help')
-subTotal.innerHTML = 20;
 window.onload = function(){
     if(localStorage.getItem('cart').length != 0){
         notification.style.display = 'block';
@@ -45,4 +45,5 @@ window.onload = function(){
 clearCart.addEventListener('click', function(){
     location.reload();
     localStorage.setItem('cart', '[]');
+    obj = JSON.parse(localStorage.getItem('cart'))
 })
