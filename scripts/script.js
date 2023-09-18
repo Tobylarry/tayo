@@ -123,6 +123,7 @@ add.addEventListener('click', function(){
     let nameee  = namee.innerHTML;
     
     let product = products.find(function(product){
+        product.quantity = qty.innerHTML;
         return product.name == nameee;
     })
 
