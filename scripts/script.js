@@ -78,7 +78,7 @@ x.addEventListener('click', function(){
 })
 
 minus.addEventListener('click', function(){
-    if(qty.innerHTML == 0){
+    if(qty.innerHTML == 0 || qty.innerHTML >  0){
         qty.innerHTML = value;
     }
     else{
