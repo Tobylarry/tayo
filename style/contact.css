@@ -39,6 +39,27 @@
     border-radius: 20px;
     padding: 10px 10px 10px 10px;
 }
+
+@media only screen and (max-width:650px){
+    .contactForm{
+        width: 90%;
+    }
+
+    .contactForm h1{
+        font-size: 1.8em;
+    }
+    .form textarea{
+        width: 80%;
+        border-radius: 10px;
+        height:70px;
+    }
+    .form input{
+        width: 80%;
+        border-radius: 10px;
+        height:40px;
+    }
+    
+}
 @media only screen and (max-width:650px){
     .contactForm{
         width: 90%;
@@ -95,3 +116,4 @@
 }
     
 }
+

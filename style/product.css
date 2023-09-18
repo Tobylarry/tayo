@@ -162,3 +162,40 @@
         display: none;
     }
   }
+
+
+  
+  @media only screen and (min-width: 651px) and (max-width: 1000px) {
+    .show
+    .show .showProduct{
+       flex-direction: column;
+       width: 80%;
+    }
+
+    .show h1{
+        font-size: 1.2rem;
+        margin-top:5px;
+    }
+    .show h3{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .show .all{
+        padding:30px 20px 30px 20px;
+        width:80%;
+    }
+
+
+    .show .mainProduct{
+        width: 150px;
+        height: 150px;
+    }
+    .img1, .img2, .img3{
+        width:60px;
+        height: 60px;
+    }
+    .img3{
+        display: none;
+    }
+  }
+

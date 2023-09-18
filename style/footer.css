@@ -1,4 +1,12 @@
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    line-height: 15px;
+  }
 
+  
 footer {
     background-color: #000000;
     color: #ffffff;
@@ -24,3 +32,4 @@ footer {
     }
 }
   
+
