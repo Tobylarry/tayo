@@ -1,14 +1,4 @@
 
-.ship footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    color: #ffffff;
-    width: 100%;
-    clear: both;
-  margin-top: 80px;
-}
 .shipping{
     width:70%;
     margin: 0 auto;
