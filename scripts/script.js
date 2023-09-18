@@ -78,8 +78,8 @@ x.addEventListener('click', function(){
 })
 
 minus.addEventListener('click', function(){
-    if(qty.innerHTML == 0 || qty.innerHTML >  0){
-        qty.innerHTML = value;
+    if(qty.innerHTML == 0 || qty.innerHTML <  0){
+        qty.innerHTML = 0;
     }
     else{
         value--;
