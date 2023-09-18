@@ -24,29 +24,29 @@ let value = 0;
 /** image[0].addEventListener('click', function(){
     show.style.display = "block";
     main.src = "./image/blsckTop.jpg"
-    img1.src = "./image/trend1.jpg"
-    img2.src = "./image/trend2.jpg"
-    img3.src = "./image/trend1.jpg"
+    img1.src = "./image/trend10.jpeg"
+    img2.src = "./image/trend11.jpg"
+    img3.src = "./image/trend12.jpg"
     namee.innerHTML = 'Boogy Boyz Black Tshirt';
     price.innerHTML = '$50.00 USD';
 })
 */
 image[1].addEventListener('click', function(){
     show.style.display = "block";
-    main.src = "./image/whiteRed.jpg"
-    img1.src = "./image/trend11.jpg"
-    img2.src = "./image/whiteRed.jpg"
-    img3.src = "./image/trend11.jpg"
+    main.src = "./image/black.JPG"
+    img1.src = "./image/trend1.jpg"
+    img2.src = "./image/trend2.jpg"
+    img3.src = "./image/trend10.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Red';
     price.innerHTML = '$30.00 USD';
 })
 
 image[2].addEventListener('click', function(){
     show.style.display = "block";
-    main.src = "./image/blue.JPG"
-    img1.src = "./image/trend3.jpeg"
-    img2.src = "./image/trend4.jpeg"
-    img3.src = "./image/trend5.jpeg"
+    main.src = "./image/black.JPG"
+    img1.src = "./image/trend2.jpg"
+    img2.src = "./image/trend9.jpg"
+    img3.src = "./image/trend10.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Blue';
     price.innerHTML = '$35.00 USD';
 })
@@ -54,20 +54,18 @@ image[2].addEventListener('click', function(){
 image[3].addEventListener('click', function(){
     show.style.display = "block";
     main.src = "./image/black.JPG"
-    img1.src = "./image/trend12.jpg"
-    img2.src = "./image/trend9.jpeg"
-    img3.src = "./image/trend8.jpeg"
+    img1.src = "./image/trend7.jpg"
+    img2.src = "./image/trend8.jpg"
+    img3.src = "./image/trend10.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Black';
     price.innerHTML = '$30.00 USD';
 })
 
 image[4].addEventListener('click', function(){
     show.style.display = "block";
-    main.src = "./image/black.JPG";
-    img1.src = "./image/trend5.jpeg"
-    img2.src = "./image/trend7.jpeg"
-    img1.src = "./image/trend6.jpeg"
-    img2.src = "./image/trend7.jpeg"
+    main.src = "./image/black.JPG"
+    img1.src = "./image/trend5.jpg"
+    img2.src = "./image/trend6.jpg"
     img3.src = "./image/trend10.jpeg"
     namee.innerHTML = 'Boogy Boyz star cap Orange';
     price.innerHTML = '$30.00 USD';
@@ -97,38 +95,19 @@ addition.addEventListener('click', function(){
 let products = JSON.parse(localStorage.getItem('products'));
 let cart = JSON.parse(localStorage.getItem('cart'));
 
-let quantity = JSON.parse(localStorage.getItem('quantity'));
-let valu = JSON.parse(localStorage.getItem('valu'));
-
 
 //fetch data from json file
     fetch("data.json")
-    .then(function(response, res){
-        return response.json();
-    })
-    .then(function(data){
-        localStorage.setItem('products', JSON.stringify(data));
-        
-        if(!localStorage.getItem('cart')){
-            localStorage.setItem('cart', '[]');
-            console.log(localStorage.getItem('cart'))
-        }
-        console.log(localStorage.getItem('products', 'val'))
-    })
-
-//for quantity of each product.
-  fetch("quantity.json")
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        localStorage.setItem('quantity', JSON.stringify(data));
-
-          if(!localStorage.getItem('valu')){
-            localStorage.setItem('valu', '[]');
-            console.log(localStorage.getItem('valu'))
+        localStorage.setItem('products', JSON.stringify(data));
+        if(!localStorage.getItem('cart')){
+            localStorage.setItem('cart', '[]');
+            console.log(localStorage.getItem('cart'))
         }
-        console.log(localStorage.getItem('quantity'))
+        console.log(localStorage.getItem('products'))
     })
 
 
@@ -136,6 +115,7 @@ let valu = JSON.parse(localStorage.getItem('valu'));
 //ADDING THE PRODUCT IN THE CART
 
 add.addEventListener('click', function(){
+   
     show.style.display = 'none';
     if(!switchs && localStorage.getItem('cart')){
         notification.style.display = 'block'   
@@ -153,7 +133,6 @@ add.addEventListener('click', function(){
     }
     else{
         let res = cart.find(function(element){
-             element.quantity = parseInt(qty.innerHTML);
             return element.name == nameee;
         });
         console.log(res)
@@ -185,11 +164,10 @@ function getTotal(){
         return prev + next;
     }, 0);
 
-    console.log(sum, 'hero');
+    console.log(sum);
 }
 
 console.log(cart)
-console.log('n')
 
 
 
