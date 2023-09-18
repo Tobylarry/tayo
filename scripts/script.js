@@ -79,7 +79,6 @@ x.addEventListener('click', function(){
 
 minus.addEventListener('click', function(){
     if(qty.innerHTML == 0){
-        value = 0;
         qty.innerHTML = value;
     }
     else{
@@ -155,7 +154,7 @@ add.addEventListener('click', function(){
     }
     else{
         let res = cart.find(function(element){
-             element.quantity = parseInt(qty.innerHTML);
+             element.quantity = parseInt(value);
             return element.name == nameee;
         });
         console.log(res)
