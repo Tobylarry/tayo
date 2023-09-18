@@ -192,7 +192,6 @@ function removeItemFromCart(productId){
 
 
 console.log(cart)
-console.log('n')
 
 
 
