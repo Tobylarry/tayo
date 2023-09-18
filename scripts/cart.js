@@ -21,7 +21,7 @@ if(localStorage.getItem('cart')){
         <div>
         <label>Quantity</label><br>
         <span>-</span> <p>${item.quantity}</p><span> + </span>
-        <span class='minus' onclick="minus()">-</span> <p>${item.quantity}</p><span class='addition' onclick='add()'> + </span>
+        <span>-</span> <p>${item.quantity}</p><span> + </span>
         </div>
        <div>
        <label>Total</label><br>
@@ -46,5 +46,5 @@ clearCart.addEventListener('click', function(){
     location.reload();
     localStorage.setItem('cart', '[]');
     obj = JSON.parse(localStorage.getItem('cart'))
-    document.querySelector('.det').innerHTML = '  EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED';
+    document.querySelector('.det').innerHTML = ' EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED';
 })
