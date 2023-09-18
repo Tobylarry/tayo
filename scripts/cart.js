@@ -34,7 +34,7 @@ if(localStorage.getItem('cart')){
     })
     document.querySelector('.det').innerHTML = showItem;
 }
-console.log(subTotal.innerHTML, 'help')
+console.log(subTotal.innerHTML = (20).toString(), 'help')
 subTotal.innerHTML = 20;
 window.onload = function(){
     if(localStorage.getItem('cart').length != 0){
