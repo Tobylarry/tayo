@@ -110,7 +110,6 @@ let cart = JSON.parse(localStorage.getItem('cart'));
             localStorage.setItem('cart', '[]');
             console.log(localStorage.getItem('cart'))
         }
-        console.log(localStorage.getItem('products', 'val'))
     })
 
 
