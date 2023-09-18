@@ -46,4 +46,5 @@ clearCart.addEventListener('click', function(){
     location.reload();
     localStorage.setItem('cart', '[]');
     obj = JSON.parse(localStorage.getItem('cart'))
+    document.querySelector('.det').innerHTML = '  EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED';
 })
