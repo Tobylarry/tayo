@@ -31,11 +31,11 @@ if(localStorage.getItem('cart')){
        </div>
 
        `
-       subTotal.textContent = 20;
     })
     document.querySelector('.det').innerHTML = showItem;
 }
 console.log(subTotal.innerHTML)
+subTotal.innerHTML = 20;
 window.onload = function(){
     if(localStorage.getItem('cart').length != 0){
         notification.style.display = 'block';
