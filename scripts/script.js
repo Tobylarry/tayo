@@ -13,7 +13,6 @@ let qty = document.querySelector('.qty');
 let add = document.getElementById('add');
 let det = document.querySelector('.det');
 let notification = document.querySelector('.notification');
-let switchs = false;
 
 
 //SETTING GLOBAL VARIABLES SO WE CAN ACCESS THEM FROM INSIDE THE FUNCTIONS.
@@ -98,9 +97,6 @@ addition.addEventListener('click', function(){
 let products = JSON.parse(localStorage.getItem('products'));
 let cart = JSON.parse(localStorage.getItem('cart'));
 
-let quantity = JSON.parse(localStorage.getItem('quantity'));
-let valu = JSON.parse(localStorage.getItem('valu'));
-
 
 //fetch data from json file
     fetch("data.json")
@@ -117,33 +113,14 @@ let valu = JSON.parse(localStorage.getItem('valu'));
         console.log(localStorage.getItem('products', 'val'))
     })
 
-//for quantity of each product.
-  fetch("quantity.json")
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        localStorage.setItem('quantity', JSON.stringify(data));
-
-          if(!localStorage.getItem('valu')){
-            localStorage.setItem('valu', '[]');
-            console.log(localStorage.getItem('valu'))
-        }
-        console.log(localStorage.getItem('quantity'))
-    })
-
 
   
 //ADDING THE PRODUCT IN THE CART
 
 add.addEventListener('click', function(){
     show.style.display = 'none';
-    if(!switchs && localStorage.getItem('cart')){
-        notification.style.display = 'block'   
-    }
 
     let nameee  = namee.innerHTML;
-    console.log(nameee)
     
     let product = products.find(function(product){
         return product.name == nameee;
