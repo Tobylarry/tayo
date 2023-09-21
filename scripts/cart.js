@@ -64,7 +64,7 @@ function clearCartItems(){
 //get order price total..... method hoisted
 function getTotal(){
     let temp = cartItems.map(function(item){
-        return parseint(item.price ) * item.quantity;
+        return parseInt(item.price ) * item.quantity;
     })
 
     let sum = temp.reduce(function(prev, next){
