@@ -6,19 +6,12 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 
 
 //See all functions below......
-clearCart.addEventListener('click', clearCartItems) //clear cart.....
+clearCart.addEventListener('click', clearCartItems()) //clear cart.....
 getTotal() //Get total price......
-
-
-window.addEventListener("load", (event) => {
-    loadCart()
-    console.log("page is fully loaded");
-  });
 
 
 
 // Display cart items.....
-function loadCart(){
     if(cartItems.length > 0){
         let obj = JSON.parse(localStorage.getItem('cart'))
         console.log(obj)
@@ -49,8 +42,6 @@ function loadCart(){
         })
         dett.innerHTML += showItem;
     }
-        dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PCEED";
-}
 
 
 /*** window.onload = function(){
@@ -60,10 +51,6 @@ function loadCart(){
    
 }
 */
-
-
-
-
 
 // Empty shopping cart..... method hoisted
 function clearCartItems(){
