@@ -13,7 +13,7 @@ let qty = document.querySelector('.qty');
 let add = document.getElementById('add');
 let det = document.querySelector('.det');
 let notification = document.querySelector('.notification');
-let switchs = false;
+
 
 
 //SETTING GLOBAL VARIABLES SO WE CAN ACCESS THEM FROM INSIDE THE FUNCTIONS.
@@ -115,11 +115,8 @@ let cart = JSON.parse(localStorage.getItem('cart'));
 //ADDING THE PRODUCT IN THE CART
 
 add.addEventListener('click', function(){
-   
     show.style.display = 'none';
-    if(!switchs && localStorage.getItem('cart')){
-        notification.style.display = 'block'   
-    }
+    notification.style.display = 'block';
 
     let nameee  = namee.innerHTML;
     console.log(nameee)

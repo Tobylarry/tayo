@@ -43,7 +43,7 @@ if(localStorage.getItem('cart')){
 */
 
 clearCart.addEventListener('click', function(){
-    localStorage.getItem('cart') = [];
+    localStorage.setItem('cart', '[]');
     dett.computedStyleMap.display = 'block';
     location.reload();
 })
