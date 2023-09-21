@@ -63,7 +63,7 @@ function clearCart(){
 
 //get order price total..... method hoisted
 function getTotal(){
-    let temp = cart.map(function(item){
+    let temp = cartItems.map(function(item){
         return parseFloat(item.price);
     })
 
