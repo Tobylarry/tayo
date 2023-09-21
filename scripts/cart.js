@@ -49,7 +49,7 @@ function loadCart(){
         })
         dett.innerHTML = showItem;
     }else{
-        dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED";
+        dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PCEED";
     }
 }
 
