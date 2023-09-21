@@ -2,14 +2,17 @@ let qy = document.querySelector('.qty');
 let clearCart = document.querySelector('.cc');
 let dett = document.querySelector('.det');
 let subTotal = document.querySelector('.subTotal');
-
-clearCart.addEventListener('click', clearCartItems)
-
-let cartItems = JSON.parse(localStorage.getItem('cart'))
+let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 
 
+//See all functions below......
+clearCart.addEventListener('click', clearCartItems) //clear cart.....
+getTotal() //Get total price......
 
 
+
+
+// Display cart items.....
 if(localStorage.getItem('cart')){
     let obj = JSON.parse(localStorage.getItem('cart'))
     console.log(obj)
@@ -55,7 +58,7 @@ if(localStorage.getItem('cart')){
 // Empty shopping cart..... method hoisted
 function clearCartItems(){
         localStorage.setItem('cart', '[]');
-        dett.computedStyleMap.display = 'block';
+        dett.style.display = 'block';
         location.reload();
 }
 
@@ -73,5 +76,3 @@ function getTotal(){
 
     subTotal.innerHTML = "Total $" + sum;
 }
-
-getTotal()
