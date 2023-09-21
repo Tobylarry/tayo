@@ -17,7 +17,7 @@ if(localStorage.getItem('cart')){
        <p>$${"$" + item.price}</p>
        </div>
        <div class='pqt'>
-        <label>Price</label><br>
+        <div><label>Price</label><br>
         <p>${item.price}</p>
         </div>
         <div>
