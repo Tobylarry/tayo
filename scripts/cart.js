@@ -60,7 +60,6 @@ if(localStorage.getItem('cart').length > 0){
 // Empty shopping cart..... method hoisted
 function clearCartItems(){
         localStorage.setItem('cart', '[]');
-        location.reload();
 }
 
 
