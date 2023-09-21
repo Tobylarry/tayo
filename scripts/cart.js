@@ -1,5 +1,8 @@
 let qy = document.querySelector('.qty');
 let clearCart = document.querySelector('.cc');
+let dett = document.querySelector('.det');
+
+
 
 
 if(localStorage.getItem('cart')){
@@ -31,15 +34,16 @@ if(localStorage.getItem('cart')){
     })
     document.querySelector('.det').innerHTML = showItem;
 }
-window.onload = function(){
+/*** window.onload = function(){
     if(localStorage.getItem('cart') == 0){
         notification.style.display = 'block';
     }
    
 }
+*/
 
 clearCart.addEventListener('click', function(){
+    localStorage.getItem('cart') = [];
+    dett.computedStyleMap.display = 'block';
     location.reload();
-    alert('cart cleared')
-    localStorage.clear()
 })
