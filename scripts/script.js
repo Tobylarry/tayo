@@ -158,19 +158,6 @@ function removeItemFromCart(productId){
 
 
 
-//get order price total
-function getTotal(){
-    let temp = cart.map(function(item){
-        return parseFloat(item.price);
-    })
-
-    let sum = temp.reduce(function(prev, next){
-        return prev + next;
-    }, 0);
-
-    console.log(sum);
-}
-
 console.log(cart)
 
 
