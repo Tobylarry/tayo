@@ -6,7 +6,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 
 
 //See all functions below......
-clearCart.addEventListener('click', clearCartItems()) //clear cart.....
+clearCart.addEventListener('click', clearCartItems) //clear cart.....
 getTotal() //Get total price......
 
 
@@ -47,7 +47,7 @@ function loadCart(){
     
            `
         })
-        dett.innerHTML = showItem;
+        dett.innerHTML += showItem;
     }
         dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PCEED";
 }
