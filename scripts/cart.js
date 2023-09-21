@@ -5,10 +5,6 @@ let subTotal = document.querySelector('.subTotal');
 let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 
 
-//See all functions below......
-clearCart.addEventListener('click', clearCartItems) //clear cart.....
-getTotal() //Get total price......
-
 
 
 // Display cart items.....
@@ -40,7 +36,7 @@ getTotal() //Get total price......
     
            `
         })
-        dett.innerHTML += showItem;
+        dett.innerHTML = showItem;
     }
 
 
@@ -52,12 +48,13 @@ getTotal() //Get total price......
 }
 */
 
-// Empty shopping cart..... method hoisted
-function clearCartItems(){
-        localStorage.setItem('cart', '[]');
-        dett.innerHTML ='EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED';
-}
 
+//clear cart.....
+clearCart.addEventListener('click', function clearCartItems(){
+    localStorage.setItem('cart', '[]');
+    dett.innerHTML ='EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED';
+}
+) 
 
 
 //get order price total..... method hoisted
@@ -72,3 +69,4 @@ function getTotal(){
 
     subTotal.innerHTML = "Total $" + sum;
 }
+getTotal() //Get total price......
