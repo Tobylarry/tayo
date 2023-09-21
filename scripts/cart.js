@@ -10,8 +10,13 @@ clearCart.addEventListener('click', clearCartItems()) //clear cart.....
 getTotal() //Get total price......
 
 
+window.addEventListener("load", (event) => {
+    loadCart()
+    console.log("page is fully loaded");
+  });
 
-window.onload(
+
+
 // Display cart items.....
 function loadCart(){
     if(cartItems.length > 0){
@@ -48,7 +53,6 @@ function loadCart(){
     }
 }
 
-)
 
 /*** window.onload = function(){
     if(localStorage.getItem('cart') == 0){
