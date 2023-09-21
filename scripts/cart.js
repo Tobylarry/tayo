@@ -18,10 +18,10 @@ if(localStorage.getItem('cart')){
        </div>
        <div class='pqt'>
         <div><label>Price</label><br>
-        <p>$50</p></div>
+        <p>${item.price}</p></div>
         <div>
         <label>Quantity</label><br>
-        <input type="number" placeholder="2"/><br>
+        <p>${item.quantity}</p>
         </div>
        <div>
        <label>Total</label><br>
