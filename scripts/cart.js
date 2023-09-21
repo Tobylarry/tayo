@@ -11,40 +11,45 @@ getTotal() //Get total price......
 
 
 
-
+window.onload(
 // Display cart items.....
-if(localStorage.getItem('cart').length > 0){
-    let obj = JSON.parse(localStorage.getItem('cart'))
-    console.log(obj)
-   let showItem = obj.map((item) =>{
-       return `
-       <div class='it'>
-       <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
-       <div>
-       <p>${item.name}</p>
-       <p>${"$" + item.price}</p>
-       </div>
-       <div class='pqt'>
-        <div><label>Price</label><br>
-        <p>${item.price}</p>
-        </div>
-        <div>
-        <label>Quantity</label><br>
-        <p>${item.quantity}</p>
-        </div>
-       <div>
-       <label>Sub Total</label><br>
-       <p>${item.price * item.quantity}</p>
-       </div>
-       </div>
-       </div>
-
-       `
-    })
-    dett.innerHTML = showItem;
-}else{
-    dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED";
+function loadCart(){
+    if(localStorage.getItem('cart').length > 0){
+        let obj = JSON.parse(localStorage.getItem('cart'))
+        console.log(obj)
+       let showItem = obj.map((item) =>{
+           return `
+           <div class='it'>
+           <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
+           <div>
+           <p>${item.name}</p>
+           <p>${"$" + item.price}</p>
+           </div>
+           <div class='pqt'>
+            <div><label>Price</label><br>
+            <p>${item.price}</p>
+            </div>
+            <div>
+            <label>Quantity</label><br>
+            <p>${item.quantity}</p>
+            </div>
+           <div>
+           <label>Sub Total</label><br>
+           <p>${item.price * item.quantity}</p>
+           </div>
+           </div>
+           </div>
+    
+           `
+        })
+        dett.innerHTML = showItem;
+    }else{
+        dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED";
+    }
 }
+
+)
+
 /*** window.onload = function(){
     if(localStorage.getItem('cart') == 0){
         notification.style.display = 'block';
