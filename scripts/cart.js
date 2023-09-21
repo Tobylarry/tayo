@@ -13,7 +13,7 @@ getTotal() //Get total price......
 
 
 // Display cart items.....
-if(localStorage.getItem('cart')){
+if(localStorage.getItem('cart').length > 0){
     let obj = JSON.parse(localStorage.getItem('cart'))
     console.log(obj)
    let showItem = obj.map((item) =>{
