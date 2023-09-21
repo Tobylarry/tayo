@@ -30,7 +30,7 @@ if(localStorage.getItem('cart')){
         <p>${item.quantity}</p>
         </div>
        <div>
-       <label>Total</label><br>
+       <label>Sub Total</label><br>
        <p>${item.price * item.quantity}</p>
        </div>
        </div>
@@ -71,7 +71,7 @@ function getTotal(){
         return prev + next;
     }, 0);
 
-    console.log(sum);
+    subTotal.innerHTML = "Total $" + sum;
 }
 
 getTotal()
