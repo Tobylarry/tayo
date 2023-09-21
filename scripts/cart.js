@@ -25,7 +25,7 @@ if(localStorage.getItem('cart')){
         </div>
        <div>
        <label>Total</label><br>
-       <p>$50</p>
+       <p>${item.price * item.quantity}</p>
        </div>
        </div>
        </div>
