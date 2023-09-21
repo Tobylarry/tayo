@@ -41,7 +41,9 @@ if(localStorage.getItem('cart')){
 
        `
     })
-    document.querySelector('.det').innerHTML = showItem;
+    dett.innerHTML = showItem;
+}else{
+    dett.innerHTML = "EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED";
 }
 /*** window.onload = function(){
     if(localStorage.getItem('cart') == 0){
@@ -58,7 +60,6 @@ if(localStorage.getItem('cart')){
 // Empty shopping cart..... method hoisted
 function clearCartItems(){
         localStorage.setItem('cart', '[]');
-        dett.style.display = 'block';
         location.reload();
 }
 
