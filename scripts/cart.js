@@ -3,7 +3,7 @@ let clearCart = document.querySelector('.cc');
 let dett = document.querySelector('.det');
 let subTotal = document.querySelector('.subTotal');
 
-clearCart.addEventListener('click', clearCart)
+clearCart.addEventListener('click', clearCartItems)
 
 let cartItems = JSON.parse(localStorage.getItem('cart'))
 
@@ -53,7 +53,7 @@ if(localStorage.getItem('cart')){
 
 
 // Empty shopping cart..... method hoisted
-function clearCart(){
+function clearCartItems(){
         localStorage.setItem('cart', '[]');
         dett.computedStyleMap.display = 'block';
         location.reload();
