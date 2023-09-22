@@ -52,8 +52,8 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 //clear cart.....
 clearCart.addEventListener('click', function clearCartItems(){
     localStorage.setItem('cart', '[]');
-    location.reload();
     dett.innerHTML ='EMPTY CART! PLEASE PLACE AN ORDER TO PROCEED';
+    subTotal.innerHTML = "Total $" + 0;
 }
 ) 
 
