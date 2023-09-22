@@ -3,6 +3,7 @@ let clearCart = document.querySelector('.cc');
 let dett = document.querySelector('.det');
 let subTotal = document.querySelector('.subTotal');
 let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
+cartItems = cartItems.match(/^,/g);
 
 
 
