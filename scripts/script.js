@@ -13,7 +13,7 @@ let qty = document.querySelector('.qty');
 let add = document.getElementById('add');
 let det = document.querySelector('.det');
 let notification = document.querySelector('.notification');
-let size = document.querySelector('#size');
+let size = document.querySelector('#sizes');
 
 
 //SETTING GLOBAL VARIABLES SO WE CAN ACCESS THEM FROM INSIDE THE FUNCTIONS.
