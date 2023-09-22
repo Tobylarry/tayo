@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    width:100%;
+    width:90%;
 }
 
 .det .detailImg{
@@ -18,7 +18,6 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    width: 40%;
 }
 
 .det .secondPart{
@@ -49,5 +48,8 @@
 @media screen and (max-width: 450px) {
     .det{
         width:90%;
+    }
+    .det .secondPart{
+      flex-direction: column;
     }
   }
