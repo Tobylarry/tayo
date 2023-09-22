@@ -30,7 +30,7 @@ let shopMore = document.querySelector('.shopMore');
 
            <div class='pqt'>
             <div><label>Price</label><br>
-            <p>${item.price}</p>
+            <p>${"$" + item.price}</p>
             </div>
 
             <div>
