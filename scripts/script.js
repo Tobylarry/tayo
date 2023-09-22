@@ -83,12 +83,14 @@ minus.addEventListener('click', function(){
     else{
         value--;
         qty.innerHTML = value;
+        value = 0;
     }
 })
 
 addition.addEventListener('click', function(){
     value++;
     qty.innerHTML = value;
+    value = 0;
 })
 
 
