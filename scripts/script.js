@@ -158,7 +158,9 @@ function removeItemFromCart(productId){
     localStorage.setItem("cart", JSON.stringify(temp));
 }
 
-
+window.onload = function(){
+    notification.style.display = 'block';
+}
 
 console.log(cart)
 
