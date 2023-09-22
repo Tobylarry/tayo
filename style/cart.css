@@ -73,10 +73,10 @@
         margin-bottom: 13px;
         font-size: 13px;
         border-radius: 20px;
-        border: none;
+        border: 1px soolid black;
         width: 80px;
     }
-    .det .btn{
+    #pay .btn{
         float:right;
     }
   }
