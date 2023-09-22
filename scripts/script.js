@@ -136,7 +136,12 @@ add.addEventListener('click', function(){
             cart.push(product);
         }
     }
-    console.log(size.options[size.selectIndex].index)
+    var x = document.getElementById("sizes").selectedIndex;
+    var y = document.getElementById("sizes").options;
+    alert("Index: " + y[x].index + " is " + y[x].text);
+
+
+
     for(let product of cart){
         if(product.name === nameee){
             product.quantity = qty.innerHTML;
