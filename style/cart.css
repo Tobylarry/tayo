@@ -71,10 +71,10 @@
 
     #pay input{
         margin-bottom: 13px;
-        font-size: 12px;
-        border-radius: 15px;
-        border: 1px soolid black;
-        width: auto;
+        font-size: 11px;
+        border-radius: 12px;
+        background-color: black;
+        width: 100px;
         padding:5px;
     }
     #pay .topBtn, #pay .botBtn{
