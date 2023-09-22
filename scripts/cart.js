@@ -29,17 +29,13 @@ let shopMore = document.querySelector('.shopMore');
            </div>
 
            <div class='pqt'>
-            <div><label>Price</label><br>
-            <p>${"$" + item.price}</p>
-            </div>
-
             <div>
-            <label>Qty</label><br>
+            <label>Quantity</label><br>
             <p>${item.quantity}<p>
             </div>
 
            <div>
-           <label>Subtotal</label><br>
+           <label>Sub Total</label><br>
            <p>${item.price * item.quantity}</p> </br>
            </div>
 
