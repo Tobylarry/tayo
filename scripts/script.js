@@ -77,18 +77,15 @@ x.addEventListener('click', function(){
 
 minus.addEventListener('click', function(){
     if(qty.innerHTML == 0){
-        value = 0;
         qty.innerHTML = value;
     }
     else{
-        value--;
-        qty.innerHTML = value;
+        qty.innerHTML -= value;
     }
 })
 
 addition.addEventListener('click', function(){
-    value++;
-    qty.innerHTML = value;
+    qty.innerHTML += value;
 })
 
 
