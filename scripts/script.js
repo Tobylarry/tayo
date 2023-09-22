@@ -143,6 +143,7 @@ add.addEventListener('click', function(){
             function myFunction() {
                 var x = size.selectedIndex;
                 var y = size.options;
+                product.size = y[x].text
                 console.log(y[x].text)
               }
         }
