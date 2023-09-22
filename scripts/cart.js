@@ -35,11 +35,6 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            <label>Sub Total</label><br>
            <p>${item.price * item.quantity}</p> </br>
            </div>
-           <div>
-           <span class='removee' value = ${item.id}>
-           Remove
-           </span>
-           </div>
            </div>
            </div>
     
@@ -66,12 +61,6 @@ clearCart.addEventListener('click', function clearCartItems(){
     subTotal.innerHTML = "Total $" + 0;
 }
 ) 
-
-//Remove Item
-removee.querySelector('.removee').addEventListener('click', function(){
-  let temp = cartItems.filter(item => item.id != removee.querySelector('.removee'));
-    localStorage.setItem('cart', JSON.stringify(temp));
-})
 
 //get order price total..... method hoisted
 function getTotal(){
