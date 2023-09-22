@@ -14,7 +14,6 @@ let add = document.getElementById('add');
 let det = document.querySelector('.det');
 let notification = document.querySelector('.notification');
 
-let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart....
 
 //SETTING GLOBAL VARIABLES SO WE CAN ACCESS THEM FROM INSIDE THE FUNCTIONS.
 let value = 0;
@@ -150,12 +149,6 @@ add.addEventListener('click', function(){
     console.log(localStorage.getItem('cart'))
   
 })
-
-//removing Items
-function removeItemFromCart(productId){
-    let temp = cart.filter(item => item.id != productId);
-    localStorage.setItem("cart", JSON.stringify(temp));
-}
 
 window.onload = function(){
     if(cart.length > 0){
