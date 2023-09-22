@@ -45,7 +45,7 @@
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) {
     .det{
         width:90%;
     }
