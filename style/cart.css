@@ -75,4 +75,7 @@
         border-radius: 20px;
         text-align: center;
     }
+    .det .btn{
+        float:right;
+    }
   }
