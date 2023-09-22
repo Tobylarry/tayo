@@ -22,6 +22,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            <div>
            <p>${item.name}</p>
            <p>${"$" + item.price}</p>
+           <p>
            </div>
            <div class='pqt'>
             <div><label>Price</label><br>
