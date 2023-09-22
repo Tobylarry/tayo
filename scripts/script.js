@@ -144,6 +144,7 @@ add.addEventListener('click', function(){
                 console.log(size.value)
         }
     }
+}
     localStorage.setItem("cart", JSON.stringify(cart));
 
     value = 0;
