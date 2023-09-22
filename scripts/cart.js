@@ -4,7 +4,7 @@ let dett = document.querySelector('.det');
 let subTotal = document.querySelector('.subTotal');
 let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 let shopMore = document.querySelector('.shopMore');
-
+let checkTrend = document.querySelector('.checkTrend');
 
 // Display cart items.....
     if(cartItems.length > 0){
@@ -59,10 +59,12 @@ let shopMore = document.querySelector('.shopMore');
 }
 */
 //Whe user clicks on shop more redirects to product page....
-
 shopMore.addEventListener('click', function(){
     location.href = '../products.html'
 })
+
+//When user clicks check trend redirects to trend page.....
+checkTrend.addEventListener('click', ()=>{location.href = '../trends.html'})
 
 //clear cart.....
 clearCart.addEventListener('click', function clearCartItems(){
