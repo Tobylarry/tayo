@@ -25,7 +25,9 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
             </div>
             <div>
             <label>Quantity</label><br>
-            <p>${item.quantity}</p>
+            <span class="minuss">-</span>
+            <span class="qty">${item.quantity}</span>
+            <span class="additionn">+</span>
             </div>
            <div>
            <label>Sub Total</label><br>
@@ -71,3 +73,21 @@ function getTotal(){
     subTotal.innerHTML = "Total $" + sum;
 }
 getTotal() //Get total price......
+
+
+//Update item quantity.... -
+minuss.addEventListener('click', function(){
+    if(qty.innerHTML == 0){
+        qty.innerHTML = value;
+    }
+    else{
+        value--;
+        qty.innerHTML = value;
+    }
+})
+
+//Update item quantity.... +
+additionn.addEventListener('click', function(){
+    value++;
+    qty.innerHTML = value;
+})
