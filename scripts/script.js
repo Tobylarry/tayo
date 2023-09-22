@@ -143,8 +143,6 @@ add.addEventListener('click', function(){
             var x = document.getElementById("sizes").selectedIndex;
             var y = document.getElementById("sizes").options;
             product.size = y[x].text;
-    alert("Index: " + y[x].index + " is " + y[x].text);
-
         }
     }
     localStorage.setItem("cart", JSON.stringify(cart));

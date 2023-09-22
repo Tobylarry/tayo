@@ -51,6 +51,7 @@
     }
     .det .secondPart{
       flex-direction: column;
+      width: 70%;
     }
     span, p{
         font-size: 13px;
