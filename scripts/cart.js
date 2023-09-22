@@ -32,7 +32,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            <p>${item.price * item.quantity}</p> </br>
            </div>
            <div>
-           <span>
+           <span class='removee' value = ${item.id}>
            Remove
            </span>
            </div>
@@ -62,6 +62,12 @@ clearCart.addEventListener('click', function clearCartItems(){
 }
 ) 
 
+//Remove Item
+removee.querySelector('.removee').addEventListener('click', function(){
+  let temp = cartItems.filter(item => item.id != removee.querySelector('.removee'));
+    localStorage.getItem('cart', JSON.stringify(temp));
+    location.reload();
+})
 
 //get order price total..... method hoisted
 function getTotal(){
