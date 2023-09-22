@@ -21,8 +21,8 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
            <div>
            <p>${item.name}</p>
-           <p>${"$" + item.price}</p>
-           <p>${item.size}</p>
+           <span>${"$" + item.price}</span>
+           <span>${item.size}</span>
            </div>
            <div class='pqt'>
             <div><label>Price</label><br>
