@@ -3,7 +3,7 @@ let clearCart = document.querySelector('.cc');
 let dett = document.querySelector('.det');
 let subTotal = document.querySelector('.subTotal');
 let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
-cartItems = cartItems.match(/^,/g);
+
 
 
 
@@ -12,6 +12,7 @@ cartItems = cartItems.match(/^,/g);
     if(cartItems.length > 0){
         let obj = JSON.parse(localStorage.getItem('cart'))
         console.log(obj)
+        obj = obj.match(/,/g);
        let showItem = obj.map((item) =>{
            return `
            <div class='it'>
@@ -66,8 +67,7 @@ clearCart.addEventListener('click', function clearCartItems(){
 //Remove Item
 removee.querySelector('.removee').addEventListener('click', function(){
   let temp = cartItems.filter(item => item.id != removee.querySelector('.removee'));
-    localStorage.getItem('cart', JSON.stringify(temp));
-    location.reload();
+    localStorage.setItem('cart', JSON.stringify(temp));
 })
 
 //get order price total..... method hoisted
