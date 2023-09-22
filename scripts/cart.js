@@ -18,27 +18,36 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
         if(item != ','){
            return `
            <div class='it'>
+           <div class='detailImg'>
            <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
+           </div>
+
            <div class='secondPart'>
+
            <div>
            <p>${item.name}</p>
            <span>${"$" + item.price}</span>
            <span>${item.size}</span>
            </div>
+
            <div class='pqt'>
             <div><label>Price</label><br>
             <p>${item.price}</p>
             </div>
+
             <div>
             <label>Quantity</label><br>
             <p>${item.quantity}<p>
             </div>
+
            <div>
            <label>Sub Total</label><br>
            <p>${item.price * item.quantity}</p> </br>
            </div>
+
            </div>
            </div>
+
            </div>
     
            `

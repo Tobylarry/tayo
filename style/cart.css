@@ -10,6 +10,10 @@
     width:100%;
 }
 
+.det .detailImg{
+    width:20%;
+}
+
 .det .pqt{
     display: flex;
     justify-content: space-between;
@@ -21,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    width: 40%;
+    width: 80%;
 }
 
 .det .pqt input{
