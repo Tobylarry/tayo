@@ -136,15 +136,12 @@ add.addEventListener('click', function(){
             cart.push(product);
         }
     }
-
+    console.log(size.value)
     for(let product of cart){
         if(product.name === nameee){
             product.quantity = qty.innerHTML;
-            function myFunction() {
-                console.log(size.value)
         }
     }
-}
     localStorage.setItem("cart", JSON.stringify(cart));
 
     value = 0;
