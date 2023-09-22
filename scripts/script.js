@@ -139,7 +139,6 @@ add.addEventListener('click', function(){
 
     for(let product of cart){
         if(product.name === nameee){
-            console.log(product, product.name, product.quantity, qty.innerHTML)
             product.quantity = qty.innerHTML;
         }
     }
