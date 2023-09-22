@@ -136,7 +136,7 @@ add.addEventListener('click', function(){
             cart.push(product);
         }
     }
-    console.log(size.selectIndex)
+    console.log(size.options[size.selectIndex].index)
     for(let product of cart){
         if(product.name === nameee){
             product.quantity = qty.innerHTML;
