@@ -74,6 +74,7 @@
         font-size: 13px;
         border-radius: 20px;
         border: none;
+        width: 80px;
     }
     .det .btn{
         float:right;
