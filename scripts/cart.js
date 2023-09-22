@@ -12,10 +12,10 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
     if(cartItems.length > 0){
         let obj = JSON.parse(localStorage.getItem('cart'))
        
-        obj = obj.join(' ')
         console.log(obj)
 
        let showItem = obj.map((item) =>{
+        if(item != ','){
            return `
            <div class='it'>
            <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
@@ -44,6 +44,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            </div>
     
            `
+        }
         })
         dett.innerHTML = showItem;
     }
