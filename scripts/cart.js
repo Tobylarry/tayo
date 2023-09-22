@@ -34,7 +34,7 @@ let checkTrend = document.querySelector('.checkTrend');
 
            <div>
            <label>Sub Total</label><br>
-           <p>${item.price * item.quantity}</p> </br>
+           <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
 
            </div>
