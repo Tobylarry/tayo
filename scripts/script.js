@@ -80,12 +80,14 @@ minus.addEventListener('click', function(){
         qty.innerHTML = value;
     }
     else{
-        qty.innerHTML -= value;
+        value--;
+        qty.innerHTML = value;
     }
 })
 
 addition.addEventListener('click', function(){
-    qty.innerHTML += value;
+    value++;
+    qty.innerHTML = value;
 })
 
 
@@ -113,6 +115,7 @@ let cart = JSON.parse(localStorage.getItem('cart'));
 
 add.addEventListener('click', function(){
     value = 0;
+    qty.innerHTML = 0;
     show.style.display = 'none';
     notification.style.display = 'block';
 
