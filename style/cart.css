@@ -17,6 +17,13 @@
     width: 40%;
 }
 
+.det .secondPart{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width: 40%;
+}
+
 .det .pqt input{
     width:50px;
     height:20px;
@@ -33,3 +40,10 @@
     height:40px;
     font-size: 14px;
 }
+
+
+@media screen and (max-width: 450px) {
+    .det{
+        width:90%;
+    }
+  }

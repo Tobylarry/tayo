@@ -19,6 +19,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            return `
            <div class='it'>
            <img src="${item.image}" style='height:80px; width: 50px;' alt="image"/>
+           <div class='secondPart'>
            <div>
            <p>${item.name}</p>
            <span>${"$" + item.price}</span>
@@ -35,6 +36,7 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
            <div>
            <label>Sub Total</label><br>
            <p>${item.price * item.quantity}</p> </br>
+           </div>
            </div>
            </div>
            </div>
