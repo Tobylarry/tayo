@@ -136,15 +136,15 @@ add.addEventListener('click', function(){
             cart.push(product);
         }
     }
-    var x = document.getElementById("sizes").selectedIndex;
-    var y = document.getElementById("sizes").options;
-    alert("Index: " + y[x].index + " is " + y[x].text);
-
-
 
     for(let product of cart){
         if(product.name === nameee){
             product.quantity = qty.innerHTML;
+            var x = document.getElementById("sizes").selectedIndex;
+            var y = document.getElementById("sizes").options;
+            product.size = y[x].text;
+    alert("Index: " + y[x].index + " is " + y[x].text);
+
         }
     }
     localStorage.setItem("cart", JSON.stringify(cart));
