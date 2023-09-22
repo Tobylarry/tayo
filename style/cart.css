@@ -51,9 +51,13 @@
     }
     .det .secondPart{
       flex-direction: column;
-      width: 70%;
+      width: 60%;
     }
     span, p{
         font-size: 13px;
+    }
+    .det img{
+        width: 150px;
+        height:150px;
     }
   }
