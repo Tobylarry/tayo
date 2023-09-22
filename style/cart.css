@@ -71,11 +71,13 @@
 
     #pay input{
         margin-bottom: 13px;
-        font-size: 11px;
+        font-size: 12px;
         border-radius: 12px;
         background-color: black;
-        width: 100px;
-        padding:5px;
+        color:white;
+        border: none;
+        width: 80px;
+        padding:2px;
     }
     #pay .topBtn, #pay .botBtn{
         float:right;
