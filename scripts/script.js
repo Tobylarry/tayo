@@ -104,9 +104,7 @@ let cart = JSON.parse(localStorage.getItem('cart'));
         localStorage.setItem('products', JSON.stringify(data));
         if(!localStorage.getItem('cart')){
             localStorage.setItem('cart', '[]');
-            console.log(localStorage.getItem('cart'))
         }
-        console.log(localStorage.getItem('products'))
     })
 
 
@@ -118,7 +116,6 @@ add.addEventListener('click', function(){
     notification.style.display = 'block';
 
     let nameee  = namee.innerHTML;
-    console.log(nameee)
     
     let product = products.find(function(product){
         return product.name == nameee;
@@ -149,8 +146,6 @@ add.addEventListener('click', function(){
 
     value = 0;
     qty.innerHTML = 0;
-
-    console.log(localStorage.getItem('cart'))
   
 })
 
@@ -159,8 +154,6 @@ window.onload = function(){
         notification.style.display = 'block';
     }
 }
-
-console.log(cart)
 
 
 

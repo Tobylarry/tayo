@@ -10,8 +10,6 @@ let checkTrend = document.querySelector('.checkTrend');
     if(cartItems.length > 0){
         let obj = JSON.parse(localStorage.getItem('cart'))
        
-        console.log(obj)
-
        let showItem = obj.map((item) =>{
         if(item != ','){
            return `
@@ -50,14 +48,6 @@ let checkTrend = document.querySelector('.checkTrend');
         dett.innerHTML = showItem;
     }
 
-
-/*** window.onload = function(){
-    if(localStorage.getItem('cart') == 0){
-        notification.style.display = 'block';
-    }
-   
-}
-*/
 //Whe user clicks on shop more redirects to product page....
 shopMore.addEventListener('click', function(){
     location.href = '../products.html'
