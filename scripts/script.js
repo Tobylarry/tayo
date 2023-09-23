@@ -112,6 +112,10 @@ let cart = JSON.parse(localStorage.getItem('cart'));
 //ADDING THE PRODUCT IN THE CART
 
 add.addEventListener('click', function(){
+   if(qty.innerHTML == 0){
+    add.value = "Add Quantity";
+   }
+   else{
     show.style.display = 'none';
     notification.style.display = 'block';
 
@@ -147,6 +151,7 @@ add.addEventListener('click', function(){
     value = 0;
     qty.innerHTML = 0;
   
+   }
 })
 
 window.onload = function(){
