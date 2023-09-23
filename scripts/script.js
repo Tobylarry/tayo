@@ -88,6 +88,7 @@ minus.addEventListener('click', function(){
 addition.addEventListener('click', function(){
     value++;
     qty.innerHTML = value;
+    add.value = 'ADD TO CART';
 })
 
 
