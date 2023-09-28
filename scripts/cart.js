@@ -58,7 +58,7 @@ let checkTrend = document.querySelector('.checkTrend');
         remov.addEventListener('click', function(){
             cart = cart.filter(item => item.id != remov.value)
             localStorage.setItem("cart", JSON.stringify(cart));
-            console.log(remov.value, cart)
+            location.reload();
         })
     }
 
