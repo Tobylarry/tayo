@@ -51,13 +51,7 @@ let checkTrend = document.querySelector('.checkTrend');
     }
 
     function on_alert(){
-        
-        let arr = document.querySelectorAll('.remove');
-        console.log(arr.value)
-        console.log(arr)
-        for(let i = 0; i < arr.length; i++){
-            console.log(arr[i].value)
-        }
+       console.log(document.querySelector('.remove').value)
     }
 
 //Whe user clicks on shop more redirects to product page....
