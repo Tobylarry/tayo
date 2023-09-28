@@ -58,7 +58,6 @@ let checkTrend = document.querySelector('.checkTrend');
         remov.addEventListener('click', function(){
             console.log(obj)
             obj = obj.filter(item => item.id != remov.value)
-            location.reload();
             console.log(remov.value)
         })
     }
