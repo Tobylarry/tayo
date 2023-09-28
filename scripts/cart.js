@@ -55,6 +55,8 @@ let checkTrend = document.querySelector('.checkTrend');
     for(let i = 0; i < arr.length; i++){
         const remov = arr[i];
         remov.addEventListener('click', function(){
+            arr.slice(i,1);
+            location.reload();
             console.log(remov.value)
         })
     }
