@@ -37,7 +37,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' />
+           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' num = '${item.id}' />
 
            </div>
            </div>
@@ -52,10 +52,7 @@ let checkTrend = document.querySelector('.checkTrend');
 
     function on_alert(){
         let arr = document.querySelectorAll('.nam');
-        console.log(arr)
-        for(let i = 0; i < arr.length; i++){
-            console.log(arr[i].innerHTML)
-        }
+        console.log(arr.value)
     }
 
 //Whe user clicks on shop more redirects to product page....
