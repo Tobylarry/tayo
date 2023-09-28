@@ -37,7 +37,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           <i class="fa fa-trash-o" style="font-size:48px;color:red" value= "${irem.id}" class='remove'></i>
+           <i class="fa fa-trash-o" style="font-size:48px;color:red" value= "${item.id}" class='remove'></i>
 
            </div>
            </div>
