@@ -51,7 +51,7 @@ let checkTrend = document.querySelector('.checkTrend');
     }
 
     function on_alert(){
-        console.log(document.querySelector('.nam').innerHTML)
+        console.log(document.querySelectorAll('.nam').innerHTML)
     }
 
 //Whe user clicks on shop more redirects to product page....
