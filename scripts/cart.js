@@ -37,7 +37,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' value = '${item.id}'/>
+           <input type='submit' placeholder='Remove' class='remove' value = '${item.id}'/>
 
            </div>
            </div>
@@ -50,9 +50,15 @@ let checkTrend = document.querySelector('.checkTrend');
         dett.innerHTML = showItem;
     }
 
-    function on_alert(){
-       console.log(document.querySelector('.remove').value)
+    //remove button... remove an item from shopping cart......
+    let arr = document.querySelectorAll('.remove');
+    for(let i = 0; i < arr.length; i++){
+        const remov = arr[i];
+        remov.addEventListener('click', function(){
+            console.log(remov.value)
+        })
     }
+
 
 //Whe user clicks on shop more redirects to product page....
 shopMore.addEventListener('click', function(){
