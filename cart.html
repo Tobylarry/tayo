@@ -24,7 +24,7 @@
 <script>
 
     //Coonect payment using stripe.....
-    var stripe = Stripe('pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU');
+    var stripe = Stripe("pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU");
 document.querySelector('.makePayment').addEventListener("click", function(){
     stripe.redirectToCheckout({
         lineItems: [
