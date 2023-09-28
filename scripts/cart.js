@@ -54,8 +54,8 @@ let checkTrend = document.querySelector('.checkTrend');
         let arr = document.querySelectorAll('.remove');
         console.log(arr)
         for(let i = 0; i < arr.length; i++){
-            if(i === arr.value){
-                console.log(arr.value)
+            if(i === arr.num){
+                console.log(arr.num)
             }
         }
     }
