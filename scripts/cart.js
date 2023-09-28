@@ -37,8 +37,6 @@ let checkTrend = document.querySelector('.checkTrend');
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
 
-           <div onclick='show(alert('hello'))'>
-           </div>
 
            </div>
            </div>
