@@ -24,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    width: 80%;
+    width: 100%;
 }
 
 .det .pqt input{
