@@ -6,6 +6,10 @@ let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 let shopMore = document.querySelector('.shopMore');
 let checkTrend = document.querySelector('.checkTrend');
 
+function on_alert(){
+    alert('helpppp!!!!')
+}
+
 // Display cart items.....
     if(cartItems.length > 0){
         let obj = JSON.parse(localStorage.getItem('cart'))
@@ -36,7 +40,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           <input type='button' onclick = 'alert('help')' value='alert' />
+           <input type='button' onclick = 'on_alert()' placeholder='alert' />
 
            </div>
            </div>
