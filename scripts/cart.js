@@ -53,9 +53,11 @@ let checkTrend = document.querySelector('.checkTrend');
     //remove button... remove an item from shopping cart......
     let arr = document.querySelectorAll('.remove');
     for(let i = 0; i < arr.length; i++){
+        let obj = JSON.parse(localStorage.getItem('cart'))
         const remov = arr[i];
         remov.addEventListener('click', function(){
-            arr.slice(i,1);
+            console.log(obj)
+            obj = obj.filter(item => item.id != remov.value)
             location.reload();
             console.log(remov.value)
         })
