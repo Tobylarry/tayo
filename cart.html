@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boogie | Cart</title>
+    <script src="https://js.stripe.com/v3/" async></script>
     <script src="https://kit.fontawesome.com/ff6a223898.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +21,10 @@
 <link rel="stylesheet" href="./style/index.css">
 <link rel="stylesheet" href="./style/sidebar.css">
 <link rel="stylesheet" href="./style/cart.css">
-<script src="https://js.stripe.com/v3/" async></script>
 <script>
 
     //Coonect payment using stripe.....
-var stripe  = Stripe("pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU")
+    var stripe = Stripe('pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU');
 document.querySelector('.makePayment').addEventListener("click", function(){
     stripe.redirectToCheckout({
         lineItems: [
