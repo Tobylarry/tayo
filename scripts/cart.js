@@ -5,7 +5,6 @@ let subTotal = document.querySelector('.subTotal');
 let cartItems = JSON.parse(localStorage.getItem('cart')) //get cart  items.....
 let shopMore = document.querySelector('.shopMore');
 let checkTrend = document.querySelector('.checkTrend');
-let pay = document.querySelector('.pay');
 
 
 // Display cart items.....
@@ -94,20 +93,3 @@ function getTotal(){
 getTotal() //Get total price......
 
 
-//Coonect payment using stripe.....
-var stripe  = Stripe("pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU")
-pay.addEventListener("click", function(){
-    stripe.redirectToCheckout({
-        lineItems: [
-            {
-                price: "price_1NvQFvFUgzkhAezUO87L3QZN",
-                quantity: 1
-            }
-        ],
-        mode: "One time",
-        successURL: 'google.com',
-        cancelURL: 'facebook.com'
-    }).then(function(result){
-       alert(result)
-    })
-})

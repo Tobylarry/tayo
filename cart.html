@@ -21,6 +21,29 @@
 <link rel="stylesheet" href="./style/sidebar.css">
 <link rel="stylesheet" href="./style/cart.css">
 <script src="https://js.stripe.com/v3/" async></script>
+<script>
+
+let pay = document.querySelector('.pay'); ///pay button......
+
+    //Coonect payment using stripe.....
+var stripe  = Stripe("pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU")
+pay.addEventListener("click", function(){
+    stripe.redirectToCheckout({
+        lineItems: [
+            {
+                price: "price_1NvQFvFUgzkhAezUO87L3QZN",
+                quantity: 1
+            }
+        ],
+        mode: "One time",
+        successURL: 'google.com',
+        cancelURL: 'facebook.com'
+    })
+    .then(function(result){
+       
+    })
+})
+</script>
 </head>
 <body>
     <div>
