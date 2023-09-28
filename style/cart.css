@@ -47,6 +47,9 @@
 .remove{
     height: 30px;
     width: 30px;
+    border:none;
+    padding: 0;
+    margin: 0;
 }
 .remove .fa{
     font-size: 24px;
