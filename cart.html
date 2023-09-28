@@ -23,11 +23,9 @@
 <script src="https://js.stripe.com/v3/" async></script>
 <script>
 
-let pay = document.querySelector('.makePayment'); ///pay button......
-
     //Coonect payment using stripe.....
 var stripe  = Stripe("pk_test_51NvBf5FUgzkhAezUkrsNEmcdlFHAcawAzvzqyrtNwawjcYbDClLF169giRi6pVySmEYbu6wXl4JrzC9uAEdPaLbX008fTFtVxU")
-pay.addEventListener("click", function(){
+document.querySelector('.makePayment').addEventListener("click", function(){
     stripe.redirectToCheckout({
         lineItems: [
             {
