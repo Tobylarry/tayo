@@ -53,12 +53,12 @@ let checkTrend = document.querySelector('.checkTrend');
     //remove button... remove an item from shopping cart......
     let arr = document.querySelectorAll('.remove');
     for(let i = 0; i < arr.length; i++){
-        let obj = JSON.parse(localStorage.getItem('cart'))
+        let cart = JSON.parse(localStorage.getItem('cart'))
         const remov = arr[i];
         remov.addEventListener('click', function(){
-            console.log(obj)
-            obj = obj.filter(item => item.id != remov.value)
-            console.log(remov.value)
+            cart = cart.filter(item => item.id != remov.value)
+            localStorage.setItem("cart", JSON.stringify(cart));
+            console.log(remov.value, cart)
         })
     }
 
