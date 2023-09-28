@@ -37,7 +37,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' num = '${item.id}'/>
+           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' value = '${item.id}'/>
 
            </div>
            </div>
@@ -54,7 +54,7 @@ let checkTrend = document.querySelector('.checkTrend');
         let arr = document.querySelectorAll('.remove');
         console.log(arr)
         for(let i = 0; i < arr.length; i++){
-            console.log(arr[i].num)
+            console.log(arr[i].value)
         }
     }
 
