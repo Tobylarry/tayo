@@ -37,9 +37,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           
-           <span class='remove'  value = '${item.id}'><i class="fa fa-trash-o" style="font-size:24px; color:red"></i></span>
-
+           <button  placeholder='Remove' class='remove' value = '${item.id}'> Remove </button>
            </div>
            </div>
 
@@ -59,7 +57,6 @@ let checkTrend = document.querySelector('.checkTrend');
         remov.addEventListener('click', function(){
             cart = cart.filter(item => item.id != remov.value)
             localStorage.setItem("cart", JSON.stringify(cart));
-            location.reload();
         })
     }
 
