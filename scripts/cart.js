@@ -51,6 +51,7 @@ let checkTrend = document.querySelector('.checkTrend');
     }
 
     function on_alert(){
+        console.log(arr.value)
         let arr = document.querySelectorAll('.remove');
         console.log(arr)
         for(let i = 0; i < arr.length; i++){
