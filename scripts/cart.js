@@ -50,6 +50,10 @@ let checkTrend = document.querySelector('.checkTrend');
         dett.innerHTML = showItem;
     }
 
+    function on_alert(){
+        console.log(document.querySelector('.nam').innerHTML)
+    }
+
 //Whe user clicks on shop more redirects to product page....
 shopMore.addEventListener('click', function(){
     location.href = '../products.html'
