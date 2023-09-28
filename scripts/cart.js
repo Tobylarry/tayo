@@ -22,7 +22,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <div class='secondPart'>
 
            <div>
-           <p>${item.name}</p>
+           <p class='nam' >${item.name}</p>
            <span>${"$" + item.price}</span>
            <span>${item.size}</span>
            </div>
@@ -37,7 +37,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <label>Sub Total</label><br>
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
-           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' value = "${item.id}" />
+           <input type='submit' onclick = "on_alert()" placeholder='Remove' class='remove' />
 
            </div>
            </div>
