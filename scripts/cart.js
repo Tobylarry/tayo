@@ -38,7 +38,7 @@ let checkTrend = document.querySelector('.checkTrend');
            <p>${"$" + item.price * item.quantity}</p> </br>
            </div>
            
-           <span><i class="fa fa-trash-o" style="font-size:24px;color:red" class='remove' value = '${item.id}'></i></span>
+           <span class='remove'  value = '${item.id}'><i class="fa fa-trash-o" style="font-size:24px; color:red"></i></span>
 
            </div>
            </div>
